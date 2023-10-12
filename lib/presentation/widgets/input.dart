@@ -70,8 +70,8 @@ class _InputState extends State<Input> {
             ),
             SvgPicture.asset(
               widget.icon!,
-              height: 30, // Adjust the height as per your requirement
-              width: 30, // Adjust the width as per your requirement
+              height: 30,
+              width: 30, 
             ),
             const SizedBox(
               width: 10,

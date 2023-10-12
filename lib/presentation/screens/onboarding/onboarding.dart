@@ -3,6 +3,7 @@ import '../../../shared/theme.dart';
 import '../../widgets/custom_button.dart';
 import '../authentification/auth.dart';
 import '../../widgets/profile_pic.dart';
+import '../../widgets/selection.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Onboarding extends StatefulWidget {
@@ -138,58 +139,35 @@ class _Onboarding extends State<Onboarding> {
                         ),
                       );
                     } else if (i == 1) {
-Padding(
-                        padding: const EdgeInsets.only(top: 35.0),
+                      return const Padding(
+                        padding: EdgeInsets.only(top: 35),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const Text(
-                              "What is your name?",
+                            Text(
+                              "What is your goal?",
                               style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontWeight: FontWeight.w700,
                                   fontSize: 30,
                                   color: AppThemes.primaryGray),
                             ),
-                            const SizedBox(height: 30),
-                            const ProfilePic(),
-                            const SizedBox(height: 30),
-                            const Text(
-                              'acha_donna237',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: 'poppins',
-                                  fontWeight: FontWeight.w700,
-                                  color: Color.fromRGBO(85, 77, 86, 1.0)),
+                            SizedBox(height: 20),
+                            Selection(text: "No goal! Just snacking"),
+                            SizedBox(height: 20),
+                            Selection(
+                              text: "Snacking for party time!",
                             ),
-                            const SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset('assets/icons/location.svg'),
-                                const Text(
-                                  'Location',
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(151, 145, 151, 1.0),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400),
-                                )
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(40.0),
-                              child: CustomButton(
-                                controller: _controller,
-                                onPress: handleButtonPressContinue,
-                                buttonType: 'random',
-                                iconPath: 'assets/icons/pencil.svg',
-                                buttonTxt: "Edit",
-                              ),
-                            ),
+                            SizedBox(height: 20),
+                            Selection(
+                              text: "Snacking in a healthy way",
+                            )
                           ],
                         ),
-                      );                    } else if (i == 2) {
-                      return const Text('text2');
+                      );
+                    } else if (i == 2) {
+                      return const Column(
+                          // children: [Selection()],
+                          );
                     } else if (i == 3) {
                       return const Text('text2');
                     }
@@ -200,6 +178,7 @@ Padding(
               padding: const EdgeInsets.all(30.0),
               child: Column(
                 children: [
+                  //  const SizedBox(height: 40),
                   CustomButton(
                     controller: _controller,
                     onPress: handleButtonPressContinue,
