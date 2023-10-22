@@ -5,6 +5,8 @@ import '../authentification/auth.dart';
 import '../../widgets/profile_pic.dart';
 import '../../widgets/selection.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../widgets/meal_card.dart';
+import '../../../shared/constants.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -152,22 +154,64 @@ class _Onboarding extends State<Onboarding> {
                                   color: AppThemes.primaryGray),
                             ),
                             SizedBox(height: 20),
-                            Selection(text: "No goal! Just snacking"),
+                            Selection(text: "No goal! Just Cooking"),
                             SizedBox(height: 20),
                             Selection(
-                              text: "Snacking for party time!",
+                              text: "Cooking for the family!",
                             ),
                             SizedBox(height: 20),
                             Selection(
-                              text: "Snacking in a healthy way",
+                              text: "Cooking for a better life",
                             )
                           ],
                         ),
                       );
                     } else if (i == 2) {
-                      return const Column(
-                          // children: [Selection()],
-                          );
+                      return Padding(
+                        padding: const EdgeInsets.only(
+                            top: 35.0, left: 20, right: 20),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              const Text(
+                                "Which meals do you love cooking?",
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 30,
+                                  color: AppThemes.primaryGray,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              Column(
+                                children: [
+                                  for (int i = 0; i < mealInfo.length; i += 2)
+                                    Row(
+                                      children: [
+                                        MealCard(
+                                            image: mealInfo[i].image,
+                                            text: mealInfo[i].text),
+                                            
+                                        const SizedBox(width: 16),
+                                        if (i + 1 < mealInfo.length)
+                                          MealCard(
+                                              image: mealInfo[i + 1].image,
+                                              text: mealInfo[i + 1].text),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 10)
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+
+
+
+
+
+
                     } else if (i == 3) {
                       return const Text('text2');
                     }

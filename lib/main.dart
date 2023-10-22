@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'presentation/screens/welcome/welcome.dart';
+// import 'presentation/screens/welcome/welcome.dart';
+import 'presentation/screens/onboarding/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          body: Welcome(),
+          body: Onboarding(),
+          
         ));
   }
 }
