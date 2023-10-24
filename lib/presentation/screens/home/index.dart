@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-
-class Index extends StatefulWidget {
+class Index extends StatelessWidget {
   const Index({super.key});
 
   @override
-  State<Index> createState() => _IndexState();
-}
-
-class _IndexState extends State<Index> {
-  @override
   Widget build(BuildContext context) {
-    return const BottomNavigationBarItem(icon: icon);
+    return const Placeholder();
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'presentation/screens/welcome/welcome.dart';
 import 'presentation/screens/onboarding/onboarding.dart';
+// import 'shared/navigation/navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
+        // initialRoute: initialRoute,
         home: Scaffold(
           body: Onboarding(),
-          
         ));
   }
 }

@@ -7,6 +7,7 @@ import '../../widgets/selection.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../widgets/meal_card.dart';
 import '../../../shared/constants.dart';
+import '../home/home.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -18,6 +19,7 @@ class Onboarding extends StatefulWidget {
 class _Onboarding extends State<Onboarding> {
   int currentIndex = 0;
   late PageController _controller;
+
 
   @override
   void initState() {
@@ -32,10 +34,10 @@ class _Onboarding extends State<Onboarding> {
   }
 
   void handleButtonPressContinue() {
-    if (currentIndex == 3) {
+    if (currentIndex == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const Auth()),
+        MaterialPageRoute(builder: (context) => const HomePage()),
       );
     }
 
@@ -73,7 +75,7 @@ class _Onboarding extends State<Onboarding> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
-                  4,
+                  3,
                   (index) => buildDot(index),
                 ),
               ),
@@ -191,7 +193,6 @@ class _Onboarding extends State<Onboarding> {
                                         MealCard(
                                             image: mealInfo[i].image,
                                             text: mealInfo[i].text),
-                                            
                                         const SizedBox(width: 16),
                                         if (i + 1 < mealInfo.length)
                                           MealCard(
@@ -199,21 +200,13 @@ class _Onboarding extends State<Onboarding> {
                                               text: mealInfo[i + 1].text),
                                       ],
                                     ),
-                                    const SizedBox(height: 10)
+                                  const SizedBox(height: 10)
                                 ],
                               ),
                             ],
                           ),
                         ),
                       );
-
-
-
-
-
-
-                    } else if (i == 3) {
-                      return const Text('text2');
                     }
                     return null;
                   }),
