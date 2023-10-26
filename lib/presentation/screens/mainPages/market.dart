@@ -5,6 +5,6 @@ class MarketPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Market page");
+    return const SafeArea(child:  SafeArea(child:  Text("Market page")));
   }
 }

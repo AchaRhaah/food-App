@@ -7,7 +7,7 @@ import '../../widgets/selection.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../widgets/meal_card.dart';
 import '../../../shared/constants.dart';
-import '../home/home.dart';
+import '../mainPages/index.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -19,7 +19,6 @@ class Onboarding extends StatefulWidget {
 class _Onboarding extends State<Onboarding> {
   int currentIndex = 0;
   late PageController _controller;
-
 
   @override
   void initState() {
@@ -37,7 +36,7 @@ class _Onboarding extends State<Onboarding> {
     if (currentIndex == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const HomePage()),
+        MaterialPageRoute(builder: (context) => IndexPage()),
       );
     }
 

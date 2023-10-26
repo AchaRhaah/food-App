@@ -5,6 +5,6 @@ class Favorites extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Favorite page");
+    return const SafeArea(child: Text("Favorite page"));
   }
 }

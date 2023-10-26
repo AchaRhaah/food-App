@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/presentation/screens/home/search.dart';
+import 'package:foodie/presentation/screens/mainPages/search.dart';
 import '../../presentation/screens/authentification/auth.dart';
 import '../../presentation/screens/onboarding/onboarding.dart';
 import '../../presentation/screens/welcome/welcome.dart';
-import '../../presentation/screens/home/favorite.dart';
-import '../../presentation/screens/home/home.dart';
-import '../../presentation/screens/home/market.dart';
-import '../../presentation/screens/home/profile.dart';
+import '../../presentation/screens/mainPages/favorite.dart';
+import '../../presentation/screens/mainPages/home.dart';
+import '../../presentation/screens/mainPages/market.dart';
+import '../../presentation/screens/mainPages/profile.dart';
 
 final Map<String, WidgetBuilder> routes = {
   '/welcome': (BuildContext context) => const Welcome(),

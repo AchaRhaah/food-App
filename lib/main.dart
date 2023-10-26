@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'presentation/screens/onboarding/onboarding.dart';
-// import 'shared/navigation/navigation.dart';
-
+import './presentation/screens/mainPages/index.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         // initialRoute: initialRoute,
         home: Scaffold(
-          body: Onboarding(),
+          body: IndexPage(),
         ));
   }
 }
