@@ -51,3 +51,46 @@ List<MealInfo> mealInfo = [
       category: 'random',
       text: 'Adventure')
 ];
+
+class Menu {
+  final List<Category> category;
+
+  Menu({required this.category});
+}
+
+class Categories {
+  final String name;
+  final List<SubCategory> subCategories;
+  Categories({required this.name, required this.subCategories});
+}
+
+class SubCategory {
+  final String name;
+  final String coverPage;
+  final List<Food> foods;
+
+  SubCategory(
+      {required this.name, required this.coverPage, required this.foods});
+}
+
+class Food {
+  final String name;
+  final double price;
+  final int prepTime;
+  final double stars;
+
+  Food(
+      {required this.name,
+      required this.price,
+      required this.prepTime,
+      required this.stars});
+}
+
+List<Menu> menu = [
+  Menu(category: [
+    Categories(name: 'Daily Quest', subCategories: [
+      SubCategory(name: 'Guilty Pleasure', coverPage: coverPage, foods: foods),
+      SubCategory(name: 'Breakfast', coverPage: coverPage, foods: foods)
+    ])
+  ])
+];
